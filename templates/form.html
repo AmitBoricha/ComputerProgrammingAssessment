@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #27ae60;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Your Carbon Footprint Data</h2>
+        <form method="POST">
+
+            <h3>Energy Usage</h3>
+            <label>Monthly electricity bill (€):</label>
+            <input type="number" name="electric_bill" required><br>
+
+            <label>Monthly natural gas bill (€):</label>
+            <input type="number" name="gas_bill" required><br>
+
+            <label>Monthly fuel bill for transportation (€):</label>
+            <input type="number" name="fuel_bill" required><br>
+
+            <h3>Waste</h3>
+            <label>Total waste generated per month (kg):</label>
+            <input type="number" name="total_waste" required><br>
+
+            <label>Recycled/composted waste (%):</label>
+            <input type="number" name="recycled_waste" required><br>
+
+            <h3>Business Travel</h3>
+            <label>Annual business travel distance (km):</label>
+            <input type="number" name="business_travel" required><br>
+
+            <label>Vehicle fuel efficiency (liters/100 km):</label>
+            <input type="number" name="fuel_efficiency" required><br>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

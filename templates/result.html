@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #27ae60;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Your Carbon Footprint Report</h2>
+        <p><strong>Energy Usage Footprint:</strong> {{ energy_footprint }} kg CO₂</p>
+        <p><strong>Waste Footprint:</strong> {{ waste_footprint }} kg CO₂</p>
+        <p><strong>Business Travel Footprint:</strong> {{ travel_footprint }} kg CO₂</p>
+        <h3><strong>Total Carbon Footprint:</strong> {{ total_footprint }} kg CO₂</h3>
+
+        <h3>📊 Your Carbon Footprint Breakdown</h3>
+        <img src="{{ chart_path }}" alt="Carbon Footprint Chart" width="100%">
+
+        <h3>🔍 Suggestions to Reduce Your Carbon Footprint</h3>
+        <ul>
+            {% for suggestion in suggestions %}
+                <li>{{ suggestion }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/form" class="btn">Go Back</a>
+    </div>
+
+</body>
+</html>
